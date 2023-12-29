@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do some Maths today.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet">
+
+</head>
+<body>
+    <h1>Herein Lies the Solution to All Your <span> Advanced Maths </span> calculations. </h1>
+    <div class="imgcontainer">
+        <img src="/Advanced Math-logos_transparent.png" alt="logo" class="logo" height="600px" width="800px">
+    </div>
+    <div class="sampletext" data-aos="zoom-in"> 
+    <h2> We use the <span> Newton API </span> to solve <span> complex </span> mathematical problems in a few seconds, including <span> derivatives, integrals, factorizations, </span> and many more. </h2>
+        <h3> rkjfrjfrlfjrkfjrkjgrkgnngkngrjnkejgnjngjngrjrngerngjrngjgng</h3>
+        <p>loreniusmewjfkewnfjewnfjnfewnfjewknfkrjngkngkermgkjmgkemg</p> 
+    </div>
+    <h3> rkejrklmkmrkgmerkgmerlgeogk5ot4itki34tkg4rgrwfrggokergerm </h3>
+
+    <div class="calculations" data-aos="zoom-out">
+        <form action="/result" method="POST">
+            <label for="operation">Choose your desired operation: </label>
+
+            <select name="op" id="operation" required>
+                <option value="" selected>(o-o)_/ Please choose an option:</option>
+                <option value="simplify">Simplify</option>
+                <option value="factor">Factorize</option>
+                <option value="derive">Derive</option>
+                <option value="integrate">Integrate</option>
+                <option value="zeroes">Find zeroes</option>
+                <option value="tangent">Find tangent</option>
+                <option value="area">Area under Curve</option>
+                <option value="cos">Cosine</option>
+                <option value="sin">Sine</option>
+                <option value="tan">Tan</option>
+                <option value="arccos">Inverse Cosine</option>
+                <option value="arcsin">Inverse Sine</option>
+                <option value="arctan">Inverse Tan</option>
+                <option value="abs">Absolute Value</option>
+                <option value="log">Logarithm</option>
+            </select>
+            <div class="exp">
+                <!-- check if it is valid -->
+                Type in your expression: <input type="text" rows="10" name="expression" placeholder="Enter your expression here" required>
+            </div>
+            <div class="btn">
+                <button type="submit" class="btn btn-outline-info btn-lg"> Calculate! </button>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="loader"> </div>
+
+    <div class="instructions" data-aos="flip-down">
+        <ul>
+            <li> To find the tangent line of a function at a certain x value, send the request as c|f(x) where c is the given x value and f(x) is the function expression, the separator is a vertical bar '|'. </li>
+
+            <li> To find the area under a function, send the request as c:d|f(x) where c is the starting x value, d is the ending x value, and f(x) is the function under which you want the curve between the two x values. </li>
+                
+            <li> To compute fractions, enter expressions as numerator(over)denominator. For example, to process 2/4 you must send in your expression as 2(over)4. The result expression will be in standard math notation (1/2, 3/4).</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <div class="one">Created by Sridevi Shankar</div>
+        <div class="two">Powered by Newton API</div>
+        <div class="three">2023</div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+        })
+        const submit = document.querySelector(".btn");
+        const loader = document.querySelector(".loader");
+        submit.addEventListener("click", () => {
+            loader.setAttribute("style", "display: block");
+        })
+    </script>
+    <script>
+        
+    </script>
+</body>
+</html>
