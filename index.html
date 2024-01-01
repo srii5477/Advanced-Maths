@@ -86,6 +86,9 @@
         submit.addEventListener("click", () => {
             loader.setAttribute("style", "display: block");
         })
+        var current = new Date();
+        var yr = current.getFullYear();
+        document.querySelector('.three').innerHTML = yr;
     </script>
     <script>
         
