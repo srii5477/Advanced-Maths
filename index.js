@@ -3,6 +3,8 @@ import bodyParser from "body-parser";
 import axios from "axios";
 import nodecallspython from "node-calls-python";
 
+const py = nodecallspython.interpreter;
+
 import {dirname} from "path";
 import {fileURLToPath} from "url";
 
@@ -29,6 +31,13 @@ app.post("/result", async (req, res) => {
         res.render("result.ejs", { result: "We have detected an error in your submission. Please go back and read the bullet points mentioned, recheck your expression and/or make sure you have selected a valid operation." });
     }
 } )
+
+app.post("/eigenval", async (req, res) => {
+    py.import("./linalg.py").then(async (file) => {
+        const result = await py.call(file, "eigenvalue", [[1, 2, 3], [4, 0, 0], [6, -1, 0]]);
+        console.log(result);
+    })
+})
 
 
 

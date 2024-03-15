@@ -37,6 +37,13 @@ span{
     margin-top: 4%;
 }
 
+.new{
+    font-size: 35px;
+    margin-top: 12%;
+    margin-bottom: -1%;
+    font-family: 'Manrope', sans-serif;
+}
+
 .footer{
     margin-top: 4%;
     height: 25vh;
